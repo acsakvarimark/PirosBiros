@@ -1,0 +1,30 @@
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\bin\Debug\ApiSample.exe
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\bin\Debug\ApiSample.pdb
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\bin\Debug\Hotcakes.Web.dll
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.AssemblyReference.cache
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.SuggestedBindingRedirects.cache
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.CoreCompileInputs.cache
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.CopyComplete
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.exe
+C:\Users\gomba\Downloads\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.pdb
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\bin\Debug\ApiSample.exe
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\bin\Debug\ApiSample.pdb
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\bin\Debug\Hotcakes.Web.dll
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.AssemblyReference.cache
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.SuggestedBindingRedirects.cache
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.CoreCompileInputs.cache
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.csproj.CopyComplete
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.exe
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample_03.06.00\ApiSample\obj\Debug\ApiSample.pdb
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\bin\Debug\ApiSample.exe
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\bin\Debug\ApiSample.pdb
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\bin\Debug\Hotcakes.Web.dll
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.AssemblyReference.cache
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.SuggestedBindingRedirects.cache
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.CoreCompileInputs.cache
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.CopyComplete
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.exe
+C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.pdb
