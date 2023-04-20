@@ -28,3 +28,13 @@ C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Re
 C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.CopyComplete
 C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.exe
 C:\Users\gomba\OneDrive - Corvinus University of Budapest\Corvinus\4. Félév\Rendszerfejlesztés és IT projektmenedzsment\ApiSample\ApiSample\obj\Debug\ApiSample.pdb
+C:\PirosBiros\ApiSample\ApiSample\bin\Debug\ApiSample.exe
+C:\PirosBiros\ApiSample\ApiSample\bin\Debug\ApiSample.pdb
+C:\PirosBiros\ApiSample\ApiSample\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\PirosBiros\ApiSample\ApiSample\bin\Debug\Hotcakes.Web.dll
+C:\PirosBiros\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.AssemblyReference.cache
+C:\PirosBiros\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.SuggestedBindingRedirects.cache
+C:\PirosBiros\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.CoreCompileInputs.cache
+C:\PirosBiros\ApiSample\ApiSample\obj\Debug\ApiSample.csproj.CopyComplete
+C:\PirosBiros\ApiSample\ApiSample\obj\Debug\ApiSample.exe
+C:\PirosBiros\ApiSample\ApiSample\obj\Debug\ApiSample.pdb

@@ -38,22 +38,26 @@ namespace ApiSample
             var url = string.Empty;
             var key = string.Empty;
 
-            if (args.Length > 0)
-            {
-                foreach (var arg in args)
-                {
-                    url = args[0];
-                    key = args[1];
-                }
-            }
+            //if (args.Length > 0)
+            //{
+            //    foreach (var arg in args)
+            //    {
+            //        url = args[0];
+            //        key = args[1];
+            //    }
+            //}
 
             if (url == string.Empty) url = "http://20.234.113.211:8084/";
             if (key == string.Empty) key = "1-bc670955-f477-441d-8f8c-60cd5d958f8e";
 
             var proxy = new Api(url, key);
 
-            var snaps = proxy.CategoriesFindAll();
+            var snaps = proxy.ProductOptionsFindAll();
+
+            Console.WriteLine(snaps);
             
+            Console.WriteLine(snaps);
+
             if (snaps.Content != null)
             {
                 Console.WriteLine("Found " + snaps.Content.Count + " categories");
@@ -63,7 +67,7 @@ namespace ApiSample
                     if (i < snaps.Content.Count)
                     {
                         Console.WriteLine(i + ") " + snaps.Content[i].Name);
-                        var cat = proxy.CategoriesFind(snaps.Content[i].Bvin);
+                        var cat = proxy.ProductOptionsFind(snaps.Content[i].Bvin);
                         if (cat.Errors.Count > 0)
                         {
                             foreach (var err in cat.Errors)
@@ -76,18 +80,18 @@ namespace ApiSample
                             Console.WriteLine("By Bvin: " + cat.Content.Name);
                         }
 
-                        var catslug = proxy.CategoriesFindBySlug(snaps.Content[i].RewriteUrl);
-                        if (catslug.Errors.Count > 0)
-                        {
-                            foreach (var err in catslug.Errors)
-                            {
-                                Console.WriteLine("error: " + err.Code + " " + err.Description);
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("by slug: " + cat.Content.Name + " | " + cat.Content.Description);
-                        }
+                        //var catslug = proxy.ProductProperties(snaps.Content[i].RewriteUrl);
+                        //if (catslug.Errors.Count > 0)
+                        //{
+                        //    foreach (var err in catslug.Errors)
+                        //    {
+                        //        Console.WriteLine("error: " + err.Code + " " + err.Description);
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    Console.WriteLine("by slug: " + cat.Content.Name + " | " + cat.Content.Description);
+                        //}
                     }
                 }
             }

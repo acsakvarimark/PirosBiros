@@ -1,0 +1,52 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PirosBiros/1.0.0": {
+        "dependencies": {
+          "Hotcakes.CommerceDTO": "3.6.0.0"
+        },
+        "runtime": {
+          "PirosBiros.dll": {}
+        }
+      },
+      "Hotcakes.CommerceDTO/3.6.0.0": {
+        "runtime": {
+          "Hotcakes.CommerceDTO.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        }
+      },
+      "Hotcakes.Web/3.6.0.0": {
+        "runtime": {
+          "Hotcakes.Web.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PirosBiros/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hotcakes.CommerceDTO/3.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hotcakes.Web/3.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
