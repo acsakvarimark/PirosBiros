@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "K2azr2iX85AGO2Z3nhm/YCUPnTC2ShkNk6vMD+5D8zck+1DD5VHrBGXRLYZaJQpX9jqzfTdJjMRycu9/ojX2mQ==",
+  "dgSpecHash": "dIzigWhNcQNZ69cqAJtWCeM1hswzk0ftCiyt8kMXDjoqhIOubTspxzghbi83TVTT5JYrtMNM8N9aJ03Wk4IZWw==",
   "success": true,
   "projectFilePath": "C:\\PirosBiros\\PirosBiros\\PirosBiros\\PirosBiros.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\birosbeni\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

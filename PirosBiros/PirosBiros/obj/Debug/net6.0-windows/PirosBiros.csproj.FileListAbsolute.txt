@@ -18,3 +18,4 @@ C:\PirosBiros\PirosBiros\PirosBiros\obj\Debug\net6.0-windows\refint\PirosBiros.d
 C:\PirosBiros\PirosBiros\PirosBiros\obj\Debug\net6.0-windows\PirosBiros.pdb
 C:\PirosBiros\PirosBiros\PirosBiros\obj\Debug\net6.0-windows\PirosBiros.genruntimeconfig.cache
 C:\PirosBiros\PirosBiros\PirosBiros\obj\Debug\net6.0-windows\ref\PirosBiros.dll
+C:\PirosBiros\PirosBiros\PirosBiros\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
