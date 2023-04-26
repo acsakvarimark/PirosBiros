@@ -25,72 +25,72 @@ namespace Hotcakes_PirosBiros
             GetOrders();
         }
 
-        private void createOrderButton_Click(object sender, EventArgs e)
-        {
-            string url = "http://www.dnndev.me";
-            string key = "1-69c91ed8-fe63-40aa-8a5c-85be6757e079";
+        //private void createOrderButton_Click(object sender, EventArgs e)
+        //{
+        //    string url = "http://www.dnndev.me";
+        //    string key = "1-69c91ed8-fe63-40aa-8a5c-85be6757e079";
 
-            Api proxy = new Api(url, key);
+        //    Api proxy = new Api(url, key);
 
-            // create a new order object
-            var order = new OrderDTO();
+        //    // create a new order object
+        //    var order = new OrderDTO();
 
-            // add billing information
-            order.BillingAddress = new AddressDTO
-            {
-                AddressType = AddressTypesDTO.Billing,
-                City = "West Palm Beach",
-                CountryBvin = "BF7389A2-9B21-4D33-B276-23C9C18EA0C0",
-                FirstName = "John",
-                LastName = "Dough",
-                Line1 = "319 N. Clematis Street",
-                Line2 = "Suite 600",
-                Phone = "561-228-5319",
-                PostalCode = "33401",
-                RegionBvin = "7EBE4F07-A844-47B8-BDA8-863DDDF5C778"
-            };
+        //    // add billing information
+        //    order.BillingAddress = new AddressDTO
+        //    {
+        //        AddressType = AddressTypesDTO.Billing,
+        //        City = "West Palm Beach",
+        //        CountryBvin = "BF7389A2-9B21-4D33-B276-23C9C18EA0C0",
+        //        FirstName = "John",
+        //        LastName = "Dough",
+        //        Line1 = "319 N. Clematis Street",
+        //        Line2 = "Suite 600",
+        //        Phone = "561-228-5319",
+        //        PostalCode = "33401",
+        //        RegionBvin = "7EBE4F07-A844-47B8-BDA8-863DDDF5C778"
+        //    };
 
-            // add at least one line item
-            order.Items = new List<LineItemDTO>();
-            order.Items.Add(new LineItemDTO
-            {
-                ProductId = "dfcae0ee-8bcf-4321-8b31-7883b5434285",
-                Quantity = 1
-            });
+        //    // add at least one line item
+        //    order.Items = new List<LineItemDTO>();
+        //    order.Items.Add(new LineItemDTO
+        //    {
+        //        ProductId = "dfcae0ee-8bcf-4321-8b31-7883b5434285",
+        //        Quantity = 1
+        //    });
 
-            // add the shipping address
-            order.ShippingAddress = new AddressDTO();
-            order.ShippingAddress = order.BillingAddress;
-            order.ShippingAddress.AddressType = AddressTypesDTO.Shipping;
+        //    // add the shipping address
+        //    order.ShippingAddress = new AddressDTO();
+        //    order.ShippingAddress = order.BillingAddress;
+        //    order.ShippingAddress.AddressType = AddressTypesDTO.Shipping;
 
-            // specify who is creating the order
-            order.UserEmail = "info@hotcakescommerce.com";
-            order.UserID = "1";
+        //    // specify who is creating the order
+        //    order.UserEmail = "info@hotcakescommerce.com";
+        //    order.UserID = "1";
 
-            // call the API to create the order
-            ApiResponse<OrderDTO> response = proxy.OrdersCreate(order);
+        //    // call the API to create the order
+        //    ApiResponse<OrderDTO> response = proxy.OrdersCreate(order);
 
-            GetOrders();
-        }
+        //    GetOrders();
+        //}
 
-        private void deleteOrderButton_Click(object sender, EventArgs e)
-        {
-            string url = "http://www.dnndev.me";
-            string key = "1-69c91ed8-fe63-40aa-8a5c-85be6757e079";
+        //private void deleteOrderButton_Click(object sender, EventArgs e)
+        //{
+        //    string url = "http://www.dnndev.me";
+        //    string key = "1-69c91ed8-fe63-40aa-8a5c-85be6757e079";
 
-            Api proxy = new Api(url, key);
+        //    Api proxy = new Api(url, key);
 
-            // specify the order to delete
-            int rowIndex = ordersDataGridView.CurrentCell.RowIndex;
-            int columnIndex = ordersDataGridView.CurrentCell.ColumnIndex;
+        //    // specify the order to delete
+        //    int rowIndex = ordersDataGridView.CurrentCell.RowIndex;
+        //    int columnIndex = ordersDataGridView.CurrentCell.ColumnIndex;
 
-            var orderId = ordersDataGridView[columnIndex, rowIndex].Value.ToString();
+        //    var orderId = ordersDataGridView[columnIndex, rowIndex].Value.ToString();
 
-            // call the API to delete the order
-            ApiResponse<bool> response = proxy.OrdersDelete(orderId);
+        //    // call the API to delete the order
+        //    ApiResponse<bool> response = proxy.OrdersDelete(orderId);
 
-            GetOrders();
-        }
+        //    GetOrders();
+        //}
 
         public void GetOrders()
         {
