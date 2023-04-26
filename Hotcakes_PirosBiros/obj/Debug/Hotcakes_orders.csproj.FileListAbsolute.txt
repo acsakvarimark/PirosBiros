@@ -1,0 +1,16 @@
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Hotcakes_orders.exe.config
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Hotcakes_orders.exe
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Hotcakes_orders.pdb
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Hotcakes.CommerceDTO.dll
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Hotcakes.Payment.dll
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\bin\Debug\Hotcakes.Web.dll
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.csproj.AssemblyReference.cache
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.csproj.SuggestedBindingRedirects.cache
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.Form1.resources
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.Properties.Resources.resources
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.csproj.GenerateResource.cache
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.csproj.CoreCompileInputs.cache
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.csproj.CopyComplete
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.exe
+C:\Users\gomba\Desktop\bce-irf-dev\Hotcakes_orders\Hotcakes_orders\obj\Debug\Hotcakes_orders.pdb
