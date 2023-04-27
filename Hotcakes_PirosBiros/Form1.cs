@@ -19,20 +19,24 @@ namespace Hotcakes_PirosBiros
 {
     public partial class Form1 : Form
     {
-        string url = "http://20.234.113.211:8084/";
-        string key = "1-69c91ed8-fe63-40aa-8a5c-85be6757e079";
-        string productId = string.Empty;
+        string webUrl = "http://20.234.113.211:8084/";
+        string apiKey = "1-69c91ed8-fe63-40aa-8a5c-85be6757e079";
+
+        string selectedProductId = string.Empty;
+        object selectedCategorie = string.Empty;
+
+        Api proxy;
+
         public Form1()
         {
             InitializeComponent();
+            proxy = new Api(webUrl, apiKey);
             GetCategories();
         }
 
         public void GetCategories()
         {
-            Api proxy = new Api(url, key);
-
-            // call the API to find all orders in the store
+            // call the API to get all the categories
             ApiResponse<List<CategorySnapshotDTO>> response = proxy.CategoriesFindAll();
             string json = JsonConvert.SerializeObject(response);
 
@@ -47,19 +51,20 @@ namespace Hotcakes_PirosBiros
 
         public void GetProducts(object category, string filter)
         {
-            Api proxy = new Api(url, key);
-
-            // call the API to find all orders in the store
+            // call the API to get all the products
             ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
             string json = JsonConvert.SerializeObject(response);
 
             ApiResponse<List<ProductDTO>> productsApi = JsonConvert.DeserializeObject<ApiResponse<List<ProductDTO>>>(json);
 
+            // add columns
             DataTable dt = new DataTable();
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Price", typeof(int));
             dt.Columns.Add("Id", typeof(string));
 
+
+            // add data to tables
             foreach (ProductDTO item in productsApi.Content)
             {
                 if (item.Sku[0] == category.ToString()[0] && item.ProductName.ToLower().Contains(filter.ToLower()))
@@ -68,43 +73,45 @@ namespace Hotcakes_PirosBiros
                 }
             }
 
-            dataGridView.DataSource = dt;
+            productsDataGridView.DataSource = dt;
+            productsDataGridView.Columns["Id"].Visible = false;
+            productsDataGridView.Width = 350;
+            productsDataGridView.Columns["Name"].Width = 200;
+            productsDataGridView.Columns["Price"].Width = 100;
         }
 
-        private void listBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
+        private void categoriesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selected = categoriesListBox.SelectedItem;
+            selectedCategorie = categoriesListBox.SelectedItem;
 
-            GetProducts(selected, string.Empty);
+            GetProducts(selectedCategorie, string.Empty);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void filterTextBox_TextChanged(object sender, EventArgs e)
         {
-            var selected = categoriesListBox.SelectedItem;
-
-            GetProducts(selected, filterTextBox.Text);
+            GetProducts(selectedCategorie, filterTextBox.Text);
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void productsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            priceTextBox.Text = (dataGridView.CurrentRow.Cells["Price"].Value.ToString());
-            productId = dataGridView.CurrentRow.Cells["Id"].Value.ToString();
+            priceTextBox.Text = (productsDataGridView.CurrentRow.Cells["Price"].Value.ToString());
+            selectedProductId = productsDataGridView.CurrentRow.Cells["Id"].Value.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
-            Api proxy = new Api(url, key);
-
             // call the API to find the product to update
-            var product = proxy.ProductsFind(productId).Content;
+            var product = proxy.ProductsFind(selectedProductId).Content;
 
-            // update one or more properties of the product
+            // update price of the product
             product.SitePrice = Int32.Parse(priceTextBox.Text);
 
             // call the API to update the product
             proxy.ProductsUpdate(product);
 
-            MessageBox.Show("Price updated!");
+            GetProducts(selectedCategorie, filterTextBox.Text);
+
+            MessageBox.Show("Ár sikeresen frissítve!");
         }
     }
 }
