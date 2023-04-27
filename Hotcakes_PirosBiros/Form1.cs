@@ -42,7 +42,7 @@ namespace Hotcakes_PirosBiros
                              where x.Name != "Vasút"
                              select x.Name;
 
-            listBoxCategories.DataSource = categories.ToList();
+            categoriesListBox.DataSource = categories.ToList();
         }
 
         public void GetProducts(object category, string filter)
@@ -73,21 +73,21 @@ namespace Hotcakes_PirosBiros
 
         private void listBoxCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selected = listBoxCategories.SelectedItem;
+            var selected = categoriesListBox.SelectedItem;
 
             GetProducts(selected, string.Empty);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            var selected = listBoxCategories.SelectedItem;
+            var selected = categoriesListBox.SelectedItem;
 
-            GetProducts(selected, textBox1.Text);
+            GetProducts(selected, filterTextBox.Text);
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox2.Text = (dataGridView.CurrentRow.Cells["Price"].Value.ToString());
+            priceTextBox.Text = (dataGridView.CurrentRow.Cells["Price"].Value.ToString());
             productId = dataGridView.CurrentRow.Cells["Id"].Value.ToString();
         }
 
@@ -99,7 +99,7 @@ namespace Hotcakes_PirosBiros
             var product = proxy.ProductsFind(productId).Content;
 
             // update one or more properties of the product
-            product.SitePrice = Int32.Parse(textBox2.Text);
+            product.SitePrice = Int32.Parse(priceTextBox.Text);
 
             // call the API to update the product
             proxy.ProductsUpdate(product);
