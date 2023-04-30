@@ -24,7 +24,7 @@ namespace Hotcakes_PirosBiros
         string apiKey = "1-bc670955-f477-441d-8f8c-60cd5d958f8e";
 
         string selectedProductId = string.Empty;
-        object selectedCategorie = string.Empty;
+        string selectedCategorie = string.Empty;
 
         Api proxy;
 
@@ -32,25 +32,9 @@ namespace Hotcakes_PirosBiros
         {
             InitializeComponent();
             proxy = new Api(webUrl, apiKey);
-            GetCategories();
         }
 
-        public void GetCategories()
-        {
-            // call the API to get all the categories
-            ApiResponse<List<CategorySnapshotDTO>> response = proxy.CategoriesFindAll();
-            string json = JsonConvert.SerializeObject(response);
-
-            ApiResponse<List<CategorySnapshotDTO>> categoriesApi = JsonConvert.DeserializeObject<ApiResponse<List<CategorySnapshotDTO>>>(json);
-
-            var categories = from x in categoriesApi.Content
-                             where x.Name != "Vasút"
-                             select x.Name;
-
-            categoriesListBox.DataSource = categories.ToList();
-        }
-
-        public void GetProducts(object category, string filter)
+        public void GetProducts(string category, string filter)
         {
             // call the API to get all the products
             ApiResponse<List<ProductDTO>> response = proxy.ProductsFindAll();
@@ -60,32 +44,24 @@ namespace Hotcakes_PirosBiros
 
             // add columns
             DataTable dt = new DataTable();
-            dt.Columns.Add("Name", typeof(string));
-            dt.Columns.Add("Price", typeof(int));
-            dt.Columns.Add("Id", typeof(string));
-
+            dt.Columns.Add("Termék_Neve", typeof(string));
+            dt.Columns.Add("Ár", typeof(int));
+            dt.Columns.Add("ID", typeof(string));
 
             // add data to tables
             foreach (ProductDTO item in productsApi.Content)
             {
                 if (item.Sku[0] == category.ToString()[0] && item.ProductName.ToLower().Contains(filter.ToLower()))
                 {
-                    dt.Rows.Add(item.ProductName, item.SitePrice, item.Bvin);
+                    DataRow dataRow = dt.NewRow();
+                    dataRow["Termék_Neve"] = item.ProductName;
+                    dataRow["Ár"] = item.SitePrice;
+                    dataRow["ID"] = item.Bvin;
+                    dt.Rows.Add(dataRow);
                 }
             }
 
             productsDataGridView.DataSource = dt;
-            productsDataGridView.Columns["Id"].Visible = false;
-            productsDataGridView.Width = 350;
-            productsDataGridView.Columns["Name"].Width = 200;
-            productsDataGridView.Columns["Price"].Width = 100;
-        }
-
-        private void categoriesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectedCategorie = categoriesListBox.SelectedItem;
-
-            GetProducts(selectedCategorie, string.Empty);
         }
 
         private void filterTextBox_TextChanged(object sender, EventArgs e)
@@ -95,8 +71,9 @@ namespace Hotcakes_PirosBiros
 
         private void productsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            priceTextBox.Text = (productsDataGridView.CurrentRow.Cells["Price"].Value.ToString());
-            selectedProductId = productsDataGridView.CurrentRow.Cells["Id"].Value.ToString();
+            priceTextBox.Text = (productsDataGridView.CurrentRow.Cells["Ár"].Value.ToString());
+            textBox1.Text = productsDataGridView.CurrentRow.Cells["Termék_Neve"].Value.ToString();
+            selectedProductId = productsDataGridView.CurrentRow.Cells["ID"].Value.ToString();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -137,6 +114,70 @@ namespace Hotcakes_PirosBiros
         private void priceTextBox_Validated(object sender, EventArgs e)
         {
             errorProvider1.SetError(priceTextBox, string.Empty);
+        }
+
+        private void buttonPlane_Click(object sender, EventArgs e)
+        {
+            selectedCategorie = "Repülő";
+
+            GetProducts(selectedCategorie, string.Empty);
+
+            buttonPlane.BackColor = Color.Silver;
+            buttonTrain.BackColor = Color.White;
+            buttonCar.BackColor = Color.White;
+            buttonAccess.BackColor = Color.White;
+
+            priceTextBox.Text = null;
+            textBox1.Text = null;
+            selectedProductId = null;
+        }
+
+        private void buttonTrain_Click(object sender, EventArgs e)
+        {
+            selectedCategorie = "Vonat";
+
+            GetProducts(selectedCategorie, string.Empty);
+
+            buttonPlane.BackColor = Color.White;
+            buttonTrain.BackColor = Color.Silver;
+            buttonCar.BackColor = Color.White;
+            buttonAccess.BackColor = Color.White;
+
+            priceTextBox.Text = null;
+            textBox1.Text = null;
+            selectedProductId = null;
+        }
+
+        private void buttonCar_Click(object sender, EventArgs e)
+        {
+            selectedCategorie = "Autó";
+
+            GetProducts(selectedCategorie, string.Empty);
+
+            buttonPlane.BackColor = Color.White;
+            buttonTrain.BackColor = Color.White;
+            buttonCar.BackColor = Color.Silver;
+            buttonAccess.BackColor = Color.White;
+
+            priceTextBox.Text = null;
+            textBox1.Text = null;
+            selectedProductId = null;
+        }
+
+        private void buttonAccess_Click(object sender, EventArgs e)
+        {
+            selectedCategorie = "Kiegészítő";
+
+            GetProducts(selectedCategorie, string.Empty);
+
+            buttonPlane.BackColor = Color.White;
+            buttonTrain.BackColor = Color.White;
+            buttonCar.BackColor = Color.White;
+            buttonAccess.BackColor = Color.Silver;
+
+            priceTextBox.Text = null;
+            textBox1.Text = null;
+            selectedProductId = null;
         }
     }
 }
