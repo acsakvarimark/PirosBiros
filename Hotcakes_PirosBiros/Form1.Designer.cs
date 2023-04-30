@@ -114,6 +114,8 @@
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(129, 20);
             this.priceTextBox.TabIndex = 4;
+            this.priceTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.priceTextBox_Validating);
+            this.priceTextBox.Validated += new System.EventHandler(this.priceTextBox_Validated);
             // 
             // priceLabel
             // 

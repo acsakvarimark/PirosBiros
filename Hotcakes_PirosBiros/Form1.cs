@@ -123,5 +123,20 @@ namespace Hotcakes_PirosBiros
                 return;
             }
         }
+
+        private void priceTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Regex regex = new Regex("[0-9]");
+            if (!regex.IsMatch(priceTextBox.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(priceTextBox, "Csak számokat adhatsz meg!");
+            }
+        }
+
+        private void priceTextBox_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(priceTextBox, string.Empty);
+        }
     }
 }
