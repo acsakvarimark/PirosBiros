@@ -1,11 +1,12 @@
 # PirosBiros
 PirosBiros weboldalhoz tartozó admin alkalmazás útmutató
 
-//Summary
-Adminisztrációs felület, mellyel a weboldalról kapott API-n keresztül, a webshopon található különboző termékek árait tudjuk megváltoztatni.
+Adminisztrációs felület, mellyel a weboldalról kapott API-n keresztül, a webshopon található különboző termékek árait tudjuk megváltoztatni, kategóriánként bontva.
 
-A HotCakes felületéről kapott API kulccsal és a weboldal IP cimének összeköttetésével hozzáférést szerzünk a weboldalunk termékeinek adataira kategóriánként, majd a megkapott választ JSON struktúrába mentve kiiratjuk a ListBox-elembe - ezt egy külön függvényként elsőként az API meghivása után végezzük. 
+A HotCakes felületéről kapott API kulccsal és a weboldal IP cimének összeköttetésével hozzáférést szerzünk a weboldalunk termékeinek adataira kategóriánként, majd a megkapott választ JSON struktúrába mentve kiiratjuk a DataRow-elembe - ezt egy külön függvényként elsőként az API meghivása után végezzük. 
 
-A következő függvényben hasonló módszerrel járunk el, itt azonban a különálló termékeket szedjük le az API segitségével, amelyeket egy DataTable elembe helyezünk el, amelybe a termékek különböző adatait külön-külön oszlopokba helyezzük ki: név, ár és azonositó. 
+A négy különböző kategória gombjára való kattintás hatására, a fentebb emlitett kategóriára szűrhetünk - repülő, vonat, autó és kiegészitők.
 
-Ezután az előzőkben megnevezett elemekkel való felhasználói interrakcióknak megfelelően jár el a program, attól függően, hogy az mit ad meg, valamint hogy menti-e azt a felhasználó.
+A kereső TextBox-ba való beirás hatására az előzőkben megemlitett függvény kerül meghivásra, minden beirt betű esetén - igy az folyamatosan frissül.
+
+A gombokkal kiválasztott kategória szerinti cellázott elembe való kattintás hatására kijelölhetünk termékeket, melyek árait megváltoztathatjuk és elmenthetjük. Ennek validáltságát, egy csak számokat befogadó Regex-re bizzuk, igy fals információ nem kerülhet be a weboldalra mint ár. Ezután a mentés gombra kattintva, meggyőződhetünk termékünk árának frissitéséről, amely a webshopon is pillanatokon belül frissülni fog.
