@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotcakes.CommerceDTO.v1;
@@ -100,18 +101,27 @@ namespace Hotcakes_PirosBiros
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            // call the API to find the product to update
-            var product = proxy.ProductsFind(selectedProductId).Content;
+            var save = MessageBox.Show("Biztos frissíteni szeretnéd az árat?", "Árfrissítés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // update price of the product
-            product.SitePrice = Int32.Parse(priceTextBox.Text);
+            if (save == DialogResult.Yes)
+            {
+                // call the API to find the product to update
+                var product = proxy.ProductsFind(selectedProductId).Content;
 
-            // call the API to update the product
-            proxy.ProductsUpdate(product);
+                // update price of the product
+                product.SitePrice = Int32.Parse(priceTextBox.Text);
 
-            GetProducts(selectedCategorie, filterTextBox.Text);
+                // call the API to update the product
+                proxy.ProductsUpdate(product);
 
-            MessageBox.Show("Ár sikeresen frissítve!");
+                GetProducts(selectedCategorie, filterTextBox.Text);
+
+                MessageBox.Show("Ár sikeresen frissítve!");
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
